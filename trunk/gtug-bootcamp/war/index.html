@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>GTUG / Startup Weekend - Demo app</title>
+	<link rel="shortcut icon" href="favicon.png">
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+	<script type="text/javascript"	src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  </head>
+
+  <body>
+  	 <div class="container" style="margin-top:20px;">
+  	 	<div class='clearfix'>
+			<a href="http://torino.gtugs.org/" target="_blank"><img src='/img/gtug-logo.png' class='pull-left'/></a>
+			<a href="http://torino.startupweekend.org/" target="_blank"><img src='/img/startupweekend-logo.png' class='pull-right'/></a>
+		</div>
+		<div class="" style="margin-top:40px;">
+		   <h1 style="font-size: 71px;">Android + App Engine</h1>
+		   <p style="margin-top: 30px;font-size: 30px;line-height: 36px;">Demo application developed during Turin GTUG Bootcamp</p>
+		   <p style="color:gray;font-size: 30px;line-height: 36px;text-align: right;font-style: italic;"> Turin - June 5, 2012</p>
+		</div>
+		<div class='row' style="margin-top: 40px;">
+			<div class='span4'>
+				<h2>About</h2>
+				<p>
+					With an Android app you upload a photo with a caption on an app 
+					deployed on app engine (java). 
+					The server app saves the photo on blobstore, creates and saves a thumb on the datastore, 
+					and sends an asynchronous notification to the phone					
+					 		  		 
+				</p>
+			</div>
+			<div class='span4'>
+				<h2>Resources</h2>
+				<ul class="nav nav-list">
+					<li class="nav-header">
+						<a href="/slides/intro/" target="_blank">
+							<img src="/img/slides-16.png" />  &nbsp;Introduction Slides
+						</a>
+					</li>
+					<li class="nav-header">
+						<img src="/img/android-16.png" /> &nbsp;Android
+					</li>
+					<li>
+						<ul class="nav nav-list">
+							<li>
+								<a href="#"  target="_blank">
+									<img src="/img/slides-16.png" />  &nbsp; Slides
+								</a>
+							</li>
+							<li>
+								
+								<a href="#" target="_blank">
+									<img src="/img/embed-16.png" />  &nbsp;Source code 
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-header">
+						<img src="/img/appengine-16.png" /> &nbsp;App engine
+					</li>
+					<li>
+						<ul class="nav nav-list">
+							<li>
+								<a href="#" target="_blank">
+									<img src="/img/slides-16.png" /> &nbsp;Slides
+								</a>
+							</li>
+							<li>
+								<a href="http://code.google.com/p/gtug-torino-demo-android-appengine-serverside/" target="_blank">
+									<img src="/img/embed-16.png" /> &nbsp;Source code
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class='span4'>
+				<h2>Authors</h2>
+				<ul class="nav nav-list">
+					<li>
+						<div class='clearfix'>
+							<div style="border-radius: 4px 4px 4px 4px; overflow:hidden; margin-right:9px;" class='pull-left' >
+								<img src='/img/alessandro.jpg' style="width:52px;height:52px;"/>
+							</div> 
+							<div class='pull-left'>
+								<div>
+									<a href="http://www.linkedin.com/in/alessandrofranceschetti" target="_blank"><strong>Alessandro Franceschetti</strong></a>
+								</div>
+								<div>
+									<span style="color:gray;font-style: italic;">App Engine Speaker</span>
+								</div>
+								<div>
+									<a href="mailto:alessandro@gtugs.org" style="color:gray;">alessandro@gtugs.org</a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class='clearfix' style='margin-top:20px;'>
+							<div style="border-radius: 4px 4px 4px 4px; overflow:hidden; margin-right:9px;" class='pull-left' >
+								<img src='/img/cesare.jpg' style="width:52px;height:52px;"/>
+							</div> 
+							<div class='pull-left'>
+								<div>
+									<a href="http://www.linkedin.com/pub/cesare-scalise/8/385/28"  target="_blank"><strong>Cesare Scalise</strong></a>
+								</div>
+								<div>
+									<span style="color:gray;font-style: italic;">Android Speaker</span>
+								</div>
+								<div>
+									<a href="mailto:cesare.scalise@gmail.com" style="color:gray;font-style: italic;">cesare.scalise@gmail.com</a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<hr class="soften" />
+		<div class="" style="margin-top:40px;">
+			<div class='clearfix'>
+				<h1 class='pull-left'>Last Pitcures Uploaded</h1>
+				<a href="javascript:showUpload()" class='pull-right btn btn-primary' style='font-weight:bold; font-size: larger;'>
+					Upload photo from here
+				</a>
+			</div>
+			<div id="app-content">
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$.post("/view.jsp", null, function(data) {
+								$('#app-content').empty()
+								$('#app-content').append(data);
+						});
+					});
+				</script>
+			</div>
+			<script type="text/javascript">
+				function showUpload(){
+					$.post("/upload.jsp", null, function(data) {
+							$('#app-content').empty()
+							$('#app-content').append(data);
+					});
+				}
+				
+			</script>
+		</div>
+	</div>
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-32158590-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+  </body>
+</html>
