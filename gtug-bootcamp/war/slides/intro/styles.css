@@ -1,0 +1,174 @@
+.no-support-message { display:none; }
+.impress-not-supported .no-support-message { display:block; }
+
+/* additional styles just to make things look a bit nicer */
+body { background:#EBEBEB; font:16px/24px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; color:#333; }
+.step { width:940px; margin:0 auto 24px auto; text-align:center; }
+
+
+a, a:visited, a:active{
+	color: #1a80e5;
+}
+
+li{
+	text-align: left;
+	line-height: 1.6em;
+	text-decoration: none;
+	list-style: none;
+}
+
+.agenda-intro{
+	border-left: #B3B3B1 solid 2em;;
+	background-color: #eeeeec;
+	padding: .1em 1em;
+	margin: .1em;
+	display: block;
+}
+
+.agenda-android{
+	border-left: #a4c932 solid 2em;;
+	background-color: #e4f2bb;
+	padding: .1em 1em;
+	margin: .1em;
+	display: block;
+}
+
+.agenda-coffee{
+	border-left: #B3B3B1 solid 2em;;
+	background-color: #eeeeec;
+	padding: .1em 1em;
+	margin: .1em;
+	display: block;
+	font-style: italic;
+	color: #CD5AB1;
+}
+
+.agenda-appengine{
+	border-left: #1766b3 solid 2em;;
+	background-color: #e2ebf4;
+	padding: .1em 1em;
+	margin: .1em;
+	display: block;
+}
+
+.arch-schema{
+	position: relative;
+}
+
+.app-android{
+	position: absolute;
+	display: block;
+	width: 160px;
+	height: 160px;
+	border: solid 4px #a4c932;
+	background-color: #e4f2bb;
+	top: 0;
+	left:30px;
+	border-radius: 20px;
+}
+
+.upload-photo{
+	position: absolute;
+	display: block;
+	width: 480px;
+	height: 80px;
+	border-bottom: dashed 4px black;
+	top: 0px;
+	left: 210px;
+	color: #19aeff;
+}
+
+.upload-photo-hint{
+	position: absolute;
+	font-style: italic;
+	display: block;
+	width: 480px;
+	height: 80px;
+	top: 90px;
+	left: 210px;
+}
+.app-engine{
+	position: absolute;
+	display: block;
+	width: 160px;
+	height: 160px;
+	border: solid 4px #1766b3;
+	background-color: #e2ebf4;
+	top: 0;
+	right: 30px;
+	border-radius: 20px;
+}
+
+.send-notification-hint{
+	position: absolute;
+	display: block;
+	width: 250px;
+	height: 140px;
+	top: 180px;
+	right: 110px;
+	border-bottom-right-radius: 20px;
+	border-bottom: dashed 4px black;
+	border-right: dashed 4px black;
+	font-size: x-large;
+}
+
+.send-notification-2-hint{
+	position: absolute;
+	display: block;
+	width: 230px;
+	height: 140px;
+	top: 180px;
+	left: 110px;
+	border-bottom-left-radius: 20px;
+	border-bottom: dashed 4px black;
+	border-left: dashed 4px black;
+	font-size: x-large;
+}
+
+.c2dm{
+	position: absolute;
+	display: block;
+	width: 160px;
+	height: 160px;
+	border: solid 4px #a60000;
+	background-color: #F4CCCC;
+	top: 200px;
+	right: 380px;
+	border-radius: 20px;
+}
+
+.hint{
+	font-size: large;
+}
+.slide {
+	position: relative;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    color: #666666;
+    display: block;
+    font-family: 'Open Sans',Arial,sans-serif;
+    font-size: 30px;
+    height: 500px;
+    letter-spacing: -1px;
+    line-height: 36px;
+    padding: 40px 60px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    width: 900px;
+}
+
+.footer{
+	clear:both;
+	overflow: hidden;
+	font-size: smaller;
+	padding: .5em;
+	position: absolute;
+	bottom: 0;
+}
+
+.footer-logo-small{
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
