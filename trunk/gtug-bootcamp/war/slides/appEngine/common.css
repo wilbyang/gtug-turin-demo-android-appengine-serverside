@@ -1,0 +1,128 @@
+.padding-small{padding:.5em}
+.padding-left-small{padding-left:.5em}
+.padding-top-small{padding-top:.5em}
+.padding-right-small{padding-right:.5em}
+.padding-bottom-small{padding-bottom:.5em}
+.padding-medium{padding:1em}
+.padding-left-medium{padding-left:1em}
+.padding-top-medium{padding-top:1em}
+.padding-right-medium{padding-right:1em}
+.padding-bottom-medium{padding-bottom:1em}
+.padding-large{padding:2em}
+.padding-left-large{padding-left:2em}
+.padding-top-large{padding-top:2em}
+.padding-right-large{padding-right:2em}
+.padding-bottom-large{padding-bottom:2em}
+.padding-xlarge{padding:3em}
+.padding-left-xlarge{padding-left:3em}
+.padding-top-xlarge{padding-top:3em}
+.padding-right-xlarge{padding-right:3em}
+.padding-bottom-xlarge{padding-bottom:3em}
+.margin-small{padding:.5em}
+.margin-left-small{margin-left:.5em}
+.margin-top-small{margin-top:.5em}
+.margin-right-small{margin-right:.5em}
+.margin-bottom-small{margin-bottom:.5em}
+.margin-medium{margin:1em}
+.margin-left-medium{margin-left:1em}
+.margin-top-medium{margin-top:1em}
+.margin-right-medium{margin-right:1em}
+.margin-bottom-medium{margin-bottom:1em}
+.margin-large{margin:2em}
+.margin-left-large{margin-left:2em}
+.margin-top-large{margin-top:2em}
+.margin-right-large{margin-right:2em}
+.margin-bottom-large{margin-bottom:2em}
+.margin-xlarge{margin:3em}
+.margin-left-xlarge{margin-left:3em}
+.margin-top-xlarge{margin-top:3em}
+.margin-right-xlarge{margin-right:3em}
+.margin-bottom-xlarge{margin-bottom:3em}
+.left{float:left}
+.right{float:right}
+.bold{font-weight:bold}
+.italic{font-style:italic}
+.text-align-center{text-align:center}
+.text-align-left{text-align:left}
+.text-align-right{text-align:right}
+.text-align-justify{text-align:justify}
+.vertical-align-top{vertical-align:top}
+.vertical-align-bottom{vertical-align:bottom}
+.vertical-align-middle{vertical-align:middle}
+.overflow-visible{overflow:visible}
+.overflow-hidden{overflow:hidden}
+.overflow-scroll{overflow:scroll}
+.overflow-auto{overflow:auto}
+.overflow-inherit{overflow:inherit}
+.clear-left{clear:left}
+.clear-right{clear:right}
+.clear-none{clear:none}
+.clear-both{clear:both}
+.clear-inherit{clear:inherit}
+.border-solid-lightGray{border:1px solid lightGray}
+.border-solid-lightGray-left{border-left:1px solid lightGray}
+.border-solid-lightGray-top{border-top:1px solid lightGray}
+.border-solid-lightGray-right{border-right:1px solid lightGray}
+.border-solid-lightGray-bottom{border-bottom:1px solid lightGray}
+.border-dotted-lightGray{border:1px dotted lightGray}
+.border-dotted-lightGray-left{border-left:1px dotted lightGray}
+.border-dotted-lightGray-top{border-top:1px dotted lightGray}
+.border-dotted-lightGray-right{border-right:1px dotted lightGray}
+.border-dotted-lightGray-bottom{border-bottom:1px dotted lightGray}
+.border-dashed-lightGray{border:1px dashed lightGray}
+.border-dashed-lightGray-left{border-left:1px dashed lightGray}
+.border-dashed-lightGray-top{border-top:1px dashed lightGray}
+.border-dashed-lightGray-right{border-right:1px dashed lightGray}
+.border-dashed-lightGray-bottom{border-bottom:1px dashed lightGray}
+.border-solid-darkGray{border:1px solid darkGray}
+.border-solid-darkGray-left{border-left:1px solid darkGray}
+.border-solid-darkGray-top{border-top:1px solid darkGray}
+.border-solid-darkGray-right{border-right:1px solid darkGray}
+.border-solid-darkGray-bottom{border-bottom:1px solid darkGray}
+.border-dotted-darkGray{border:1px dotted darkGray}
+.border-dotted-darkGray-left{border-left:1px dotted darkGray}
+.border-dotted-darkGray-top{border-top:1px dotted darkGray}
+.border-dotted-darkGray-right{border-right:1px dotted darkGray}
+.border-dotted-darkGray-bottom{border-bottom:1px dotted darkGray}
+.border-dashed-darkGray{border:1px dashed darkGray}
+.border-dashed-darkGray-left{border-left:1px dashed darkGray}
+.border-dashed-darkGray-top{border-top:1px dashed darkGray}
+.border-dashed-darkGray-right{border-right:1px dashed darkGray}
+.border-dashed-darkGray-bottom{border-bottom:1px dashed darkGray}
+.border-solid-gray{border:1px solid gray}
+.border-solid-gray-left{border-left:1px solid gray}
+.border-solid-gray-top{border-top:1px solid gray}
+.border-solid-gray-right{border-right:1px solid gray}
+.border-solid-gray-bottom{border-bottom:1px solid gray}
+.border-dotted-gray{border:1px dotted gray}
+.border-dotted-gray-left{border-left:1px dotted gray}
+.border-dotted-gray-top{border-top:1px dotted gray}
+.border-dotted-gray-right{border-right:1px dotted gray}
+.border-dotted-gray-bottom{border-bottom:1px dotted gray}
+.border-dashed-gray{border:1px dashed gray}
+.border-dashed-gray-left{border-left:1px dashed gray}
+.border-dashed-gray-top{border-top:1px dashed gray}
+.border-dashed-gray-right{border-right:1px dashed gray}
+.border-dashed-gray-bottom{border-bottom:1px dashed gray}
+.border-solid-black{border:1px solid black}
+.border-solid-black-left{border-left:1px solid black}
+.border-solid-black-top{border-top:1px solid black}
+.border-solid-black-right{border-right:1px solid black}
+.border-solid-black-bottom{border-bottom:1px solid black}
+.border-dotted-black{border:1px dotted black}
+.border-dotted-black-left{border-left:1px dotted black}
+.border-dotted-black-top{border-top:1px dotted black}
+.border-dotted-black-right{border-right:1px dotted black}
+.border-dotted-black-bottom{border-bottom:1px dotted black}
+.border-dashed-black{border:1px dashed black}
+.border-dashed-black-left{border-left:1px dashed black}
+.border-dashed-black-top{border-top:1px dashed black}
+.border-dashed-black-right{border-right:1px dashed black}
+.border-dashed-black-bottom{border-bottom:1px dashed black}
+.row{display:table}
+.cell{display:table-cell;padding-left:1em;}
+.cell-top{display:table-cell;vertical-align:top;padding-left:1em;}
+.cell-middle{display:table-cell;vertical-align:middle;padding-left:1em;}
+.cell-bottom{display:table-cell;vertical-align:bottom;padding-left:1em;}
+a{text-decoration:none;}
+a:hover,a:active{text-decoration: underline;}
