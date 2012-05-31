@@ -12,7 +12,7 @@
 				Your browser doesn't support impress.js.  Try Chrome or Safari.
 			</div>
 			
-			<div class="step slide" data-x="-1200" data-y="-1500">
+			<div class="step slide" data-x="-1200" data-y="-500">
 				<div class='clear-both overflow-hidden'>
 					<img src='./img/startupweekend-logo.png' class='left'>
 					<img src='./img/gtug-logo.png' class='right'>
@@ -36,7 +36,7 @@
 				</div>
 			</div>
 			
-			<div class="step slide" data-x="0" data-y="-1500">
+			<div class="step slide" data-x="0" data-y="-500">
 				<h2>Cosa &egrave; Google Application Engine?</h2>
 				
 				<div class='list'>
@@ -67,7 +67,7 @@
 				</div>
 				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
 			</div>
-			<div class="step slide" data-x="1200" data-y="-1500">
+			<div class="step slide" data-x="1200" data-y="-500">
 				<h2>Punti di forza della piattaforma</h2>
 				<div class='box left'>
 					<div><strong>Scalabilit&agrave;</strong></div>
@@ -94,22 +94,40 @@
 					</div>
 				</div>
 				<div class='footer'>
-					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG & Startupweekend Bootcamp</small></i></div>
+					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
 				</div>
 				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
 			</div>
 			
-			<div class="step slide slide-trasparent" data-x="0" data-y="100" data-scale="4">
+			<div class="step slide slide-trasparent" data-x="0" data-y="1100" data-scale="4">
 				<div class='big'>
-					<h1>Persistenza dei dati</h1>
+					<div class='title'>Persistenza dei dati</div>
 		        </div>
-				<div class='footer'>
-					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG & Startupweekend Bootcamp</small></i></div>
+		    </div>
+		    <div class="step slide" data-x="-1200" data-y="800">
+		    	<h2>Persistenza dei dati: 3 possibilit&agrave;</h2>
+		    	<ol>
+		    		<li>
+				    	<strong>App Engine Datastore</strong><br>
+				    	<span> Database NoSQL </span>
+			    	</li>
+		    		<li class='padding-top-medium'>
+						<strong>Google Cloud SQL</strong><br>
+			    		Database MySQL  <span class='warning margin-left-small rotating'>Experimental</span>
+		    		</li>
+		    		<li class='padding-top-medium'>
+						<strong>Google Cloud Storage </strong><br>
+			    		Servizio di Storage per file fino a Terabytes di spazio <span class='warning margin-left-small rotating'>Experimental</span>
+		    		</li>
+		    	</ol>
+		    	<div class='footer'>
+					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
 				</div>
 				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
-		    </div>
-		    <div class="step slide" data-x="-1200" data-y="00">
-		    	<h1>Datastore - Introduzione 1/2</h1>
+		    	
+	   		</div>
+		    <div class="step slide" data-x="0" data-y="800">
+		    	<h1>Datastore - Introduzione</h1>
 		    	<p>
 		    		Database non relazionale, basato su Big Table, pensato per lavorare su <strong>enormi quantit&agrave; di dati</strong>.
 		    	</p>
@@ -121,16 +139,13 @@
 		    		Ci sono <strong>limitazioni</strong> (non banali): niente join, niente filtri con disuguaglianze su pi&ugrave; attributi, niente IN o simili.
 		    	</p>
 		    	<div class='footer'>
-					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG & Startupweekend Bootcamp</small></i></div>
+					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
 				</div>
 				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
 		    	
 	   		</div>
-		    <div class="step slide" data-x="0" data-y="0">
-		    	<h1>Datastore - Accesso ai dati</h1>
-		    	<div>
-		    		<strong>Java Datastore API</strong>
-		    	</div>
+		    <div class="step slide" data-x="1200" data-y="800">
+		    	<h1>Datastore - Entity</h1>
 		    	<div class='text-align-left code'>
 		    		<code class='code-comment'>// Inserire un record</code>
 					<code>Entity employee = new Entity("Employee");</code>
@@ -138,43 +153,134 @@
 					<code>DatastoreService ds = DatastoreServiceFactory.getDatastoreService();</code>
 					<code>ds.put(employee);</code>
 		    	</div>
+		    	<div class='text-align-left code padding-top-medium'>
+		    		<code class='code-comment'>// Gerarchia padre figlio</code>
+					<code>Entity address = new Entity("Address", employee.getKey());</code>
+					<code>ds.put(address);</code>
+		    	</div>
+				<div class='footer'>
+					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
+				</div>
+				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+		    </div>
+		    <div class="step slide" data-x="-1200" data-y="1600">
+		    	<h1>Datastore - Query</h1>
 		    	<div class='text-align-left code'>	
 		    		<code class='code-comment'>// Effettuare una query</code>
 		    		<code>Query q = new Query("Employee");</code>
 					<code>q.addFilter("lastName", Query.FilterOperator.EQUAL, lastNameParam);</code>
+					<code>PreparedQuery pq = ds.prepare(q);</code>
+					<code class='padding-top-medium'>for (Entity result : pq.asIterable()) {</code>
+					<code class='padding-left-large'>String firstName = (String) result.getProperty("firstName");</code>
+					<code class='padding-left-large'>String lastName = (String) result.getProperty("lastName");</code>
+					<code class='padding-left-large'>Integer weight = (Integer) result.getProperty("weight");</code>
+					<code class='padding-left-large'>System.out.println(firstName + " pesa " + weight +" kg");</code>
+					<code>}</code>
 		    	</div>
+				<div class='footer'>
+					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
+				</div>
+				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+		    </div>
+		    <div class="step slide" data-x="0" data-y="1600">
+		    	<h1>Datastore - Transazioni</h1>
+		    	<div class='text-align-left code'>	
+					<code>Transaction txn = ds.beginTransaction();</code>
+					<code>try {</code>
+				    <code class='padding-left-large'>Key employeeKey = KeyFactory.createKey("Employee", "Joe");</code>
+				    <code class='padding-left-large'>Entity employee = datastore.get(employeeKey);</code>
+				    <code class='padding-left-large'>employee.setProperty("vacationDays", 10);</code>
+				
+				    <code class='padding-left-large'>ds.put(employee);</code>
+				
+				   <code class='padding-left-large'> txn.commit();</code>
+					<code>} finally {</code>
+				    <code class='padding-left-large'>if (txn.isActive())</code>
+				    <code class='padding-left-xxlarge'>txn.rollback();</code>
+					<code>}</code>
+				</div>
+				<div class='footer'>
+					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
+				</div>
+				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+		    </div>
+		    <div class="step slide" data-x="1200" data-y="1600">
+		    	<h1>Datastore - Framework</h1>
 		    	<p>	
-		    		In alternativa ci sono <strong>tanti framework: JDO, JPA, Objectify...</strong>
+		    		Nel Datastore sono incluse le implementazioni di <strong>JDO</strong> e <strong>JPA</strong> 
 		    	</p>
+		    	<div class='padding-top-medium'>
+		    		Esistono anche altri framework che facilitano l'utilizzo del Datastore.
+		    	</div> 
+		    	<div>I principali sono
+		    		<strong><a href="http://code.google.com/p/objectify-appengine/">Objectify</a></strong>, 
+		    		<strong><a href="http://code.google.com/p/twig-persist/">Twig</a></strong> e 
+		    		<strong><a href="http://sites.google.com/site/slim3appengine/">Slim3</a></strong>
+		    	</div>
+		    	<div class='padding-top-small'>
+		    		Questi framework non sono sviluppati da Google, ma sono consigliati. Per utilizzarli &eacute; necessario includere le librerie nel progetto
+		    	</div>
 				<div class='footer'>
-					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG & Startupweekend Bootcamp</small></i></div>
+					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
 				</div>
 				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
-
 		    </div>
-		    <div class="step slide" data-x="1200" data-y="0">
-		    	<h1>Blobstore</h1>
-		    	<p></p>
+		    <div class="step slide slide-trasparent" data-x="3350" data-y="720" data-rotate="270" data-scale="3">
+				<div class='big'>
+					<div class='title-servizi'>Servizi</div>
+		        </div>
 		    </div>
-			<div class="step slide" data-x="3600" data-y="0">
-				<h1>Salvate i dati</h2>
-				<div class=''>
-					<strong>Database non relazionale</strong>
-				</div>
-				<p class=''>
-					Si sceglie se, quanto e cosa si vuole pagare: il pagamento avviene a consumo, si decide una soglia giornaliera (1 euro, 2 euro...) e dove si pensa che convenga (cpu, rete, dati).
-					Se si sfora la soglia l'applicazione web diventa irraggiungibile.
-					
-				</p>
+		    <div class="step slide slide-servizi" data-x="3200" data-y="1750"  data-rotate="270" data-scale="1">
+		    	<h1>1</h1>
 				<div class='footer'>
-					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG & Startupweekend Bootcamp</small></i></div>
+					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
 				</div>
 				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
-			</div>
-			
-			
-			
-			
+		    </div>
+		    <div class="step slide slide-servizi" data-x="3200" data-y="750"  data-rotate="270">
+		    	<h1>2</h1>
+				<div class='footer'>
+					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
+				</div>
+				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+		    </div>
+		    <div class="step slide slide-servizi" data-x="3200" data-y="-250"  data-rotate="270">
+		    	<h1>3</h1>
+				<div class='footer'>
+					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
+				</div>
+				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+		    </div>
+		    <div class="step slide slide-servizi" data-x="3900" data-y="1750"  data-rotate="270" data-scale="1">
+		    	<h1>4</h1>
+				<div class='footer'>
+					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
+				</div>
+				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+		    </div>
+		    <div class="step slide slide-servizi" data-x="3900" data-y="750"  data-rotate="270">
+		    	<h1>5</h1>
+				<div class='footer'>
+					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
+				</div>
+				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+		    </div>
+		    <div class="step slide slide-servizi" data-x="3900" data-y="-250"  data-rotate="270">
+		    	<h1>6</h1>
+				<div class='footer'>
+					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
+				</div>
+				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+		    </div>
+		    <div id="overview" class="step slide slide-trasparent" data-x="1000" data-y="300" data-scale="9">
+		    	<div class='big'>
+					<div class='title text-align-left'>Grazie per l'attenzione</div>
+		        </div>
+		        <div class='mail'><a href='mailto:franceschetti.alessandro@gmail.com'>franceschetti.alessandro@gmail.com</a></div>
+		       	<div class='last-footer'>
+					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
+				</div>
+    		</div>
 		</div>
 		<script type="text/javascript" src="impress.js"></script>
 		<script type="text/javascript">
