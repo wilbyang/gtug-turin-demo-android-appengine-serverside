@@ -57,7 +57,7 @@
 						for(int i= 2; i<thumbsUrl.length; i++){ 
 					%>
 						<li class="span2">
-							<div class="thumbnail" >
+							<div class="thumbnail" style="widht:160px; height:97px; overflow: hidden;" >
 								<img alt="<%out.println(captions[counter]);%>"
 									title="<%out.println(captions[counter]);%>" 
 									src="<%out.println(thumbsUrl[counter]);%>">

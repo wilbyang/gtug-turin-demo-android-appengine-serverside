@@ -43,7 +43,7 @@ public class BaseDAO {
 		log.fine("[BaseDAO::getLastPhoto] - START");
 		try {
 			Query q = new Query(Photo.NAME);
-			q.addSort("lastupdate", SortDirection.ASCENDING);
+			q.addSort("lastupdate", SortDirection.DESCENDING);
 			PreparedQuery pq = datastore.prepare(q);
 			log.fine("[BaseDAO::getLastPhoto] - pq: " + pq);
 

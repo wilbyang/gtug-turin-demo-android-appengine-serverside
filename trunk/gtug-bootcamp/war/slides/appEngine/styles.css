@@ -27,6 +27,55 @@ a,a:visited,a:active {
 strong {
 	color: #F846A1;
 }
+.warning {
+	font-size: smaller;
+	padding: .3em;
+	background-color: #f8ee48;
+	border-radius: 2px 2px 2px 2px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	letter-spacing: 4px;
+}
+
+.last-footer{
+	-moz-transform: rotate(-90deg);
+	-moz-transform-origin:right bottom; 
+	position: absolute;
+	right: 0px;
+	top: 0;
+}
+
+.mail{
+	text-align: left;
+	font-size: 30pt;
+	position: absolute;
+	bottom: 0;
+	letter-spacing: 4px;
+}
+.active .rotating {
+    -moz-transform: rotate(-10deg);
+    -moz-transition-delay: 2s;
+}
+
+.active .swing {
+	-moz-animation: 2s ease 1.5s normal none infinite swing;
+    -moz-transform-origin: center center;
+    -moz-transition-delay: 1.5s;
+    -webkit-animation:swing 2s infinite ease-in-out;
+    -webkit-transform-origin:center;
+    
+}
+
+@-moz-keyframes swing {
+ 0% {
+   -moz-transform: rotate(5deg);
+ }
+ 50% {
+   -moz-transform: rotate(-5deg);
+ }
+100%{
+   -moz-transform: rotate(5deg);
+ }
+}
 
 .list p {
 	text-align: left;
@@ -99,14 +148,26 @@ li {
 	border: none;
 	box-shadow: none;
 }
+
+.slide-servizi{
+	width: 800px;
+}
+
+
 .big {
 	
 }
 
-.big h1 {
+.big .title {
 	font-size: 81px;
+	font-weight:  bold;
 }
 
+.title-servizi{
+	font-size: 121px;
+	font-weight:  bold;
+	letter-spacing: 40px;
+}
 .footer {
 	clear: both;
 	overflow: hidden;
