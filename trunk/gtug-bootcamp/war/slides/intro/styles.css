@@ -158,6 +158,48 @@ li{
     width: 900px;
 }
 
+.bullet{
+	font-size: smaller;
+	text-align: center;
+	margin: 0 1em;
+	padding:0 .4em;
+	border: solid 3px;
+    border-radius: 4px 4px 4px 4px;
+    font-weight: bold;
+}
+
+.exercise-appengine{
+	font-size: smaller;
+}
+.exercise-appengine li{
+	border-bottom: solid 1px #e2ebf4;
+}
+.exercise-appengine li:last-child{
+	border: none;
+}
+.exercise-appengine .bullet{
+	border-color: #1766b3;
+	background-color: #1766b3;
+	color: white;
+}
+
+.exercise-android{
+	font-size: smaller;
+}
+.exercise-android li{
+	border-bottom: solid 1px #e4f2bb;
+}
+.exercise-android li:last-child{
+	border: none;
+}
+.exercise-android .bullet{
+	border-color: #a4c932;
+	background-color: #a4c932;
+	color: white;
+}
+
+
+
 .footer{
 	clear:both;
 	overflow: hidden;

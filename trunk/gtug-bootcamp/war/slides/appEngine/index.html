@@ -7,19 +7,25 @@
 		<link href="common.css" rel="stylesheet" />
 	</head>
 	<body>
+		<!--
+		<div id='mask-top'></div>
+		<div id='mask-left'></div>
+		<div id='mask-bottom'></div>
+		<div id='mask-right'></div>
+		-->
 		<div id="impress">
 			<div class="no-support-message">
 				Your browser doesn't support impress.js.  Try Chrome or Safari.
 			</div>
 			
-			<div class="step slide" data-x="-1200" data-y="-500">
+			<div id="welcome" class="step slide" data-x="-1200" data-y="-500">
 				<div class='clear-both overflow-hidden'>
-					<img src='./img/startupweekend-logo.png' class='left'>
-					<img src='./img/gtug-logo.png' class='right'>
+					<a href="http://torino.startupweekend.org/" target="_blank"><img src='./img/startupweekend-logo.png' class='right'></a>
+					<a href="http://torino.gtugs.org/" target="_blank"><img src='./img/gtug-logo.png' class='left'></a>
 				</div>
 				<div>
 					<div class='clear-both'>
-						<img src='img/google-app-engine.png' class='left'>
+						<a href="https://developers.google.com/appengine/?hl=it-IT" target="_blank"><img src='img/google-app-engine.png' class='left'></a>
 						<div class='text-align-right' style='border: solid 0px red;display:table-cell; vertical-align: bottom; height: 200px; padding-left: 60px; '>
 							<p>Introduzione a</p>
 							<h1 style='border: solid 0px red;display:table-cell; vertical-align: bottom'>Google App Engine </h1>
@@ -41,23 +47,31 @@
 				
 				<div class='list'>
 					<p>
-						Piattaforma <strong>cloud</strong> di hosting per applicazioni web
-						<img src='img/cloud.png' style='vertical-align:middle;' class='right'>
+						Piattaforma 
+						<strong><a href="http://en.wikipedia.org/wiki/Cloud_computing" target="_blank">cloud</a></strong>
+						 di hosting per applicazioni web
+						<img src='img/cloud.png' style='vertical-align:middle; width: 50px; height: 50px;' class='right'>
 					</p>
 					<p >
-						Tre linguaggi supportati: <strong>Python</strong>, <strong>Java</strong> e <strong>GO!</strong> 
+						Tre linguaggi supportati: 
+						<strong><a href="http://www.python.org/" target="_blank">Python</a></strong>, 
+						<strong><a href="http://www.java.org/" target="_blank">Java</a></strong> e 
+						<strong><a href="http://golang.org/" target="_blank">GO!</a></strong> 
 						<span class='right'>
-							<img src='img/python.png' style='vertical-align:middle;'>
-							<img src='img/java.png' style='vertical-align:middle;'>
-							<img src='img/go.png' style='vertical-align:middle;'>
+							<img src='img/python.png' style='vertical-align:middle; width: 40px; height: 40px;'>
+							<img src='img/java.png' style='vertical-align:middle; width: 40px; height: 40px;'>
+							<img src='img/go.png' style='vertical-align:middle; width: 40px; height: 40px;'>
 						</span>
 					</p>
 					<p >
-						<strong>Datastore NoSQL</strong> e tanti <strong>servizi</strong> a disposizione
-						<img src='img/database.png' style='vertical-align:middle;' class='right'>
+						<strong><a href="http://en.wikipedia.org/wiki/NoSQL" target="_blank">Datastore NoSQL</a></strong> e tanti 
+						<strong>
+							<a href="https://developers.google.com/appengine/docs/java/apis?hl=it-IT" target="_blank">servizi</a>
+						</strong> a disposizione
+						<img src='img/database.jpg' style='vertical-align:middle;' class='right'>
 					</p>
 					<p >
-						Sistema di <strong>pagamento a counsumo</strong>
+						Sistema di <strong><a href="http://en.wikipedia.org/wiki/Platform_as_a_service" target="_blank">pagamento a counsumo</a></strong>
 						<img src='img/money.png' style='vertical-align:middle;' class='right'>
 					</p>
 				</div>
@@ -65,38 +79,69 @@
 				<div class='footer'>
 					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
 				</div>
-				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+				<a href="http://torino.gtugs.org/" target="_blank"><a href="http://torino.gtugs.org/" target="_blank"><img src='img/gtug-logo-small.png' class='footer-logo-small'></a></a>
 			</div>
 			<div class="step slide" data-x="1200" data-y="-500">
 				<h2>Punti di forza della piattaforma</h2>
-				<div class='box left'>
-					<div><strong>Scalabilit&agrave;</strong></div>
-					<div>
-						le risorse allocate aumentano in base alla richiesta
+				<div class='overflow-hidden'>
+					<div class='box left'>
+						<div>
+							<strong>
+								<a href="http://en.wikipedia.org/wiki/Scalability" target="_blank">
+									Scalabilit&agrave;
+								</a>
+							</strong>
+						</div>
+						
+						<div>
+							le risorse allocate aumentano in base alla richiesta
+						</div>
+					</div>
+					<div class='box right'>
+						<div>
+							<strong>
+								<a href="https://developers.google.com/appengine/docs/billing?hl=it-IT" target="_blank">
+									Modalit&agrave; di pagamento
+								</a>
+							</strong>
+						</div>
+						<div>
+							tetto massimo di spesa e quote modificabili al volo
+						</div>
 					</div>
 				</div>
-				<div class='box right'>
-					<div><strong>Modalità di pagamento</strong></div>
-					<div>
-						tetto massimo di spesa e quote modificabili al volo
+				<div class='overflow-hidden'>
+					<div class='box left margin-top-medium'>
+						<div>
+							<strong>
+								<a href="https://developers.google.com//docs/adminconsole/index?hl=it-IT" target="_blank">
+									Console di amministrazione
+								</a>
+							</strong>
+						</div>
+						<div>
+							configurazione, log, dati, risorse utilizzate
+						</div>
 					</div>
-				</div>
-				<div class='box left margin-top-medium'>
-					<div><strong>Console di amministrazione</strong></div>
-					<div>
-						configurazione, log, dati, risorse utilizzate
-					</div>
-				</div>
-				<div class='box right margin-top-medium'>
-					<div><strong>Deploy e versioning</strong></div>
-					<div>
-						rilascio direttamente da eclipse, 10 versioni dell'app in linea
+					<div class='box right margin-top-medium'>
+						<div>
+							<strong>
+								<a href="https://developers.google.com/appengine/docs/java/gettingstarted/uploading?hl=it-IT" target="_blank">
+									Deploy e versioning
+								</a>
+							</strong>
+						</div>
+						<div>
+							rilascio direttamente da 
+							<a href="https://developers.google.com/appengine/docs/java/tools/eclipse?hl=it-IT" target="_blank">eclipse</a>,
+							 10 versioni dell'app in linea
+						</div>
 					</div>
 				</div>
 				<div class='footer'>
 					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
 				</div>
-				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+				<a href="http://torino.gtugs.org/" target="_blank"><img src='img/gtug-logo-small.png' class='footer-logo-small'></a>
 			</div>
 			
 			<div class="step slide slide-trasparent" data-x="0" data-y="1100" data-scale="4">
@@ -108,40 +153,58 @@
 		    	<h2>Persistenza dei dati: 3 possibilit&agrave;</h2>
 		    	<ol>
 		    		<li>
-				    	<strong>App Engine Datastore</strong><br>
+				    	<strong>
+				    		<a href="https://developers.google.com/appengine/docs/java/datastore/overview?hl=it-IT" target="_blank">
+				    			App Engine Datastore
+				    		</a>
+				    	</strong><br>
 				    	<span> Database NoSQL </span>
 			    	</li>
 		    		<li class='padding-top-medium'>
-						<strong>Google Cloud SQL</strong><br>
+						<strong>
+				    		<a href="http://developers.google.com/cloud-sql/" target="_blank">
+				    			Google Cloud SQL
+				    		</a>
+						</strong><br>
 			    		Database MySQL  <span class='warning margin-left-small rotating'>Experimental</span>
 		    		</li>
 		    		<li class='padding-top-medium'>
-						<strong>Google Cloud Storage </strong><br>
-			    		Servizio di Storage per file fino a Terabytes di spazio <span class='warning margin-left-small rotating'>Experimental</span>
+						<strong>
+				    		<a href="https://developers.google.com/appengine/docs/java/googlestorage?hl=it-IT" target="_blank">
+				    			Google Cloud Storage 
+				    		</a>
+						</strong><br>
+			    		Storage per file fino a Terabytes di spazio <span class='warning margin-left-small rotating'>Experimental</span>
 		    		</li>
 		    	</ol>
 		    	<div class='footer'>
 					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
 				</div>
-				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+				<a href="http://torino.gtugs.org/" target="_blank"><img src='img/gtug-logo-small.png' class='footer-logo-small'></a>
 		    	
 	   		</div>
 		    <div class="step slide" data-x="0" data-y="800">
 		    	<h1>Datastore - Introduzione</h1>
 		    	<p>
-		    		Database non relazionale, basato su Big Table, pensato per lavorare su <strong>enormi quantit&agrave; di dati</strong>.
+		    		Database non relazionale, basato su Big Table, pensato per lavorare su 
+		    		<strong>
+		    		<a href="http://en.wikipedia.org/wiki/BigTable" target="_blank">enormi quantit&agrave; di dati</a></strong>.
 		    	</p>
 		    	<p>	
 		    		Il peso di una query &eacute; dato dal numero di dati restituti, indipendentemente dalla dimensione della tabella: 
 		    		una query su milioni di record ha lo stesso peso di una query su qualche centinaio.
 		    	</p>
 		    	<p>	
-		    		Ci sono <strong>limitazioni</strong> (non banali): niente join, niente filtri con disuguaglianze su pi&ugrave; attributi, niente IN o simili.
+		    		Ci sono <strong>
+		    		<a href="https://developers.google.com/appengine/docs/java/datastore/overview?hl=it-IT#Quotas_and_Limits" target="_blank">
+		    			limitazioni
+		    		</a>
+		    		</strong> (non banali): niente join, niente filtri con disuguaglianze su pi&ugrave; attributi, niente IN o simili.
 		    	</p>
 		    	<div class='footer'>
 					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
 				</div>
-				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+				<a href="http://torino.gtugs.org/" target="_blank"><img src='img/gtug-logo-small.png' class='footer-logo-small'></a>
 		    	
 	   		</div>
 		    <div class="step slide" data-x="1200" data-y="800">
@@ -161,7 +224,7 @@
 				<div class='footer'>
 					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
 				</div>
-				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+				<a href="http://torino.gtugs.org/" target="_blank"><img src='img/gtug-logo-small.png' class='footer-logo-small'></a>
 		    </div>
 		    <div class="step slide" data-x="-1200" data-y="1600">
 		    	<h1>Datastore - Query</h1>
@@ -172,7 +235,6 @@
 					<code>PreparedQuery pq = ds.prepare(q);</code>
 					<code class='padding-top-medium'>for (Entity result : pq.asIterable()) {</code>
 					<code class='padding-left-large'>String firstName = (String) result.getProperty("firstName");</code>
-					<code class='padding-left-large'>String lastName = (String) result.getProperty("lastName");</code>
 					<code class='padding-left-large'>Integer weight = (Integer) result.getProperty("weight");</code>
 					<code class='padding-left-large'>System.out.println(firstName + " pesa " + weight +" kg");</code>
 					<code>}</code>
@@ -180,7 +242,7 @@
 				<div class='footer'>
 					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
 				</div>
-				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+				<a href="http://torino.gtugs.org/" target="_blank"><img src='img/gtug-logo-small.png' class='footer-logo-small'></a>
 		    </div>
 		    <div class="step slide" data-x="0" data-y="1600">
 		    	<h1>Datastore - Transazioni</h1>
@@ -202,20 +264,23 @@
 				<div class='footer'>
 					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
 				</div>
-				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+				<a href="http://torino.gtugs.org/" target="_blank"><img src='img/gtug-logo-small.png' class='footer-logo-small'></a>
 		    </div>
 		    <div class="step slide" data-x="1200" data-y="1600">
 		    	<h1>Datastore - Framework</h1>
 		    	<p>	
-		    		Nel Datastore sono incluse le implementazioni di <strong>JDO</strong> e <strong>JPA</strong> 
+		    		Nel Datastore sono incluse le implementazioni di 
+		    		<strong><a href="https://developers.google.com/appengine/docs/java/datastore/jdo/?hl=it-IT" target="_blank">JDO</a></strong> 
+		    		e 
+		    		<strong><a href="https://developers.google.com/appengine/docs/java/datastore/jpa/?hl=it-IT" target="_blank">JPA</a></strong> 
 		    	</p>
 		    	<div class='padding-top-medium'>
 		    		Esistono anche altri framework che facilitano l'utilizzo del Datastore.
 		    	</div> 
 		    	<div>I principali sono
-		    		<strong><a href="http://code.google.com/p/objectify-appengine/">Objectify</a></strong>, 
-		    		<strong><a href="http://code.google.com/p/twig-persist/">Twig</a></strong> e 
-		    		<strong><a href="http://sites.google.com/site/slim3appengine/">Slim3</a></strong>
+		    		<strong><a href="http://code.google.com/p/objectify-appengine/" target="_blank">Objectify</a></strong>, 
+		    		<strong><a href="http://code.google.com/p/twig-persist/" target="_blank">Twig</a></strong> e 
+		    		<strong><a href="http://sites.google.com/site/slim3appengine/" target="_blank">Slim3</a></strong>
 		    	</div>
 		    	<div class='padding-top-small'>
 		    		Questi framework non sono sviluppati da Google, ma sono consigliati. Per utilizzarli &eacute; necessario includere le librerie nel progetto
@@ -223,7 +288,7 @@
 				<div class='footer'>
 					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
 				</div>
-				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+				<a href="http://torino.gtugs.org/" target="_blank"><img src='img/gtug-logo-small.png' class='footer-logo-small'></a>
 		    </div>
 		    <div class="step slide slide-trasparent" data-x="3350" data-y="720" data-rotate="270" data-scale="3">
 				<div class='big'>
@@ -231,58 +296,195 @@
 		        </div>
 		    </div>
 		    <div class="step slide slide-servizi" data-x="3200" data-y="1750"  data-rotate="270" data-scale="1">
-		    	<h1>1</h1>
+		    	<h1>
+		    		Blobstore
+		    	</h1>
+		    	<div class='text-align-left code'>
+			    	<div>Serve per gestire 
+			    		<strong>
+			    			<a href="https://developers.google.com/appengine/docs/java/blobstore?hl=it-IT" target="_blank">
+			    				oggetti di dimensioni molto grosse
+			    			</a>
+			    		</strong> 
+			    		(immagini, filmati...)
+			    	</div>
+			    	<div>Si caricano i dati su una url generata dal blobService</div>
+			    	<code>&lt;form action="&lt;%= blobstore.createUploadUrl("/upload") %&gt;" method="post" enctype="multipart/form-data"&gt;</code>
+	       			<code class='padding-left-large'> &lt;input type="file" name="myFile"&gt;</code>
+			    	<div>Quando &eacute; terminato l'upload viene invocata la servlet specificata durante la creazione dove sar&agrave; possibile recuperare le chiavi dei blob caricati</div>
+			    	<code>Map&lt;String, BlobKey&gt; blobs = blobstore.getUploadedBlobs(req);</code>
+			    	<code>BlobKey blobKey = blobs.get("myFile");</code>
+			    	
+		    	
+		    	</div>
 				<div class='footer'>
 					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
 				</div>
-				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+				<a href="http://torino.gtugs.org/" target="_blank"><img src='img/gtug-logo-small.png' class='footer-logo-small'></a>
 		    </div>
 		    <div class="step slide slide-servizi" data-x="3200" data-y="750"  data-rotate="270">
-		    	<h1>2</h1>
+		    	<h1>Images</h1>
+		    	<div>Serve per 
+		    		<strong>
+			    		<a href="https://developers.google.com/appengine/docs/java/images?hl=it-IT" target="_blank">
+			    			manipolare le immagini
+			    		</a>
+		    		</strong>
+		    	</div>
+		    	<div class='padding-top-medium'>Ridimensiona, Ruota, Riflette, Ritaglia, Esalta contrasti e colori</div>
+		    	<div class='text-align-left code padding-top-medium'>
+					<code>ImagesService imageService = </code>
+					<code class='padding-left-medium'>ImagesServiceFactory.getImagesService();</code>
+			        <code>Image old = ImagesServiceFactory.makeImage(bytesArray);</code>
+      				<code>Transform r = ImagesServiceFactory.makeResize(200, 300);</code>
+					<code> Image new = imagesService.applyTransform(resize, old);</code>
+		    	</div>
 				<div class='footer'>
 					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
 				</div>
-				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+				<a href="http://torino.gtugs.org/" target="_blank"><img src='img/gtug-logo-small.png' class='footer-logo-small'></a>
 		    </div>
 		    <div class="step slide slide-servizi" data-x="3200" data-y="-250"  data-rotate="270">
-		    	<h1>3</h1>
+		    	<h1>Memcache</h1>
+		    	<div>E' una 
+		    		<strong>
+			    		<a href="https://developers.google.com/appengine/docs/java/memcache?hl=it-IT" target="_blank">
+			    			memoria cache distribuita
+			    		</a>
+		    		</strong>
+		    	</div>
+		    	<div>Conviene usarla, si risparmia in tempi di attesa e in risorse</div>
+		    	<div>Un dato inserito in cache resta li il pi&ugrave; a lungo possibile.</div>
+		    	<div>Ma <span class='warning'>Attenzione: Non va usato come datastore!</span></div>
+		    	<div class='text-align-left code padding-top-medium'>
+					<code>MemcacheService syncCache = </code>
+					<code class='padding-left-medium'>MemcacheServiceFactory.getMemcacheService();</code>
+					<code>value = (byte[]) syncCache.get(key); <span class='code-comment'>// read from cache</span></code>
+    				<code>if (value == null) { ... <span class='code-comment'>// reload the value</span></code>
+     				<code  class='padding-left-xxlarge'>syncCache.put(key, value); <span class='code-comment'>// populate cache</span></code>
+   					<code>}</code>
+					
+				</div> 
 				<div class='footer'>
 					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
 				</div>
-				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+				<a href="http://torino.gtugs.org/" target="_blank"><img src='img/gtug-logo-small.png' class='footer-logo-small'></a>
 		    </div>
 		    <div class="step slide slide-servizi" data-x="3900" data-y="1750"  data-rotate="270" data-scale="1">
-		    	<h1>4</h1>
+		    	<h1>User Authentication</h1>
+		    	<div>E' un servizio di autenticazione che gestisce tre 
+		    		<strong>
+		    			<a href="https://developers.google.com/appengine/docs/java/users?hl=it-IT" target="_blank">
+		    				tipi di utenti
+		    			</a>
+		    		</strong>
+		    	</div>
+		    	<ul>
+		    		<li>Google Accounts</li>
+		    		<li>Accounts on Google Apps domains</li>
+		    		<li>OpenID identifier (Yahoo!, MySpace...)</li>
+		    	</ul>
+		    	<div class='padding-top-medium'>
+					UserService si preoccupa di creare le <q>login</q> e <q>logout</q> ,
+				</div>
+				<div> 
+					e di fornire lo User ad autenticazione avvenuta
+				</div>		    	
 				<div class='footer'>
 					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
 				</div>
-				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+				<a href="http://torino.gtugs.org/" target="_blank"><img src='img/gtug-logo-small.png' class='footer-logo-small'></a>
 		    </div>
 		    <div class="step slide slide-servizi" data-x="3900" data-y="750"  data-rotate="270">
-		    	<h1>5</h1>
+		    	<h1>Task Queue</h1>
+		    	<p>Sono 
+		    		<strong>
+		    			<a href="https://developers.google.com/appengine/docs/java/taskqueue?hl=it-IT" target="_blank">
+		    				Task asincroni
+		    			</a>
+		    		</strong>
+		    	indipendenti dalle request di un utente. </p>
+		    	<p><a href="https://developers.google.com/appengine/docs/java/taskqueue/overview-push?hl=it-IT">Push Queue</a>: 
+		    		coda di default, i task vengono inseriti dall'app stessa
+		    	</p>
+		    	<p><a href="https://developers.google.com/appengine/docs/java/taskqueue/overview-pull?hl=it-IT">Pull Queue</a>: 
+		    		i task vengono inseriti da app esterne 
+		    	</p>
+		    	<div class='text-align-left code padding-top-medium'>
+		    		<code class='code-comment'>// push queue</code>
+					<code>Queue queue = QueueFactory.getDefaultQueue();</code>
+    				<code>queue.add(withUrl("/worker").param("key", key));</code>
+    			</div>
 				<div class='footer'>
 					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
 				</div>
-				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+				<a href="http://torino.gtugs.org/" target="_blank"><img src='img/gtug-logo-small.png' class='footer-logo-small'></a>
 		    </div>
 		    <div class="step slide slide-servizi" data-x="3900" data-y="-250"  data-rotate="270">
-		    	<h1>6</h1>
+		    	<h1>Tanti altri</h1>
+		    	<div class='other-service-list'>
+		    		<a href='https://developers.google.com/appengine/docs/java/appidentity/?hl=it-IT' target="_blank">
+		    			App Identity
+		    			<span class='desc'>Identifica l'app</span>
+		    		</a>
+					<a href='https://developers.google.com/appengine/docs/java/googlestorage?hl=it-IT' target="_blank">
+						Google Cloud Storage
+						<span class='desc'>Blobstore con REST Api</span>
+					</a>
+					<a href='https://developers.google.com/appengine/docs/java/capabilities?hl=it-IT' target="_blank">
+						Capabilities
+						<span class='desc'>Monitoraggio Servizi GAE</span>
+					</a>
+					<a href='https://developers.google.com/appengine/docs/java/conversion?hl=it-IT' target="_blank">
+						Conversion
+						<span class='desc'>HTML, PDF, IMG (ocr)</span>
+					</a>
+					<a href='https://developers.google.com/appengine/docs/java/channel?hl=it-IT' target="_blank">
+						Channel
+						<span class='desc'>Canale con js client</span>
+					</a>
+					<a href='https://developers.google.com/appengine/docs/java/channel?hl=it-IT' target="_blank">LogService</a>
+					<a href='https://developers.google.com/appengine/docs/java/mail?hl=it-IT' target="_blank">Mail</a>
+					<a href='https://developers.google.com/appengine/docs/java/multitenancy?hl=it-IT' target="_blank">Multitenancy</a>
+					<a href='https://developers.google.com/appengine/docs/java/oauth?hl=it-IT' target="_blank">OAuth
+						<span class='desc'>Provider OAuth</span>
+					</a>
+					<a href='https://developers.google.com/appengine/docs/java/prospectivesearch?hl=it-IT' target="_blank">Prospective Search</a>
+					<a href='https://developers.google.com/appengine/docs/java/search?hl=it-IT' target="_blank">Search
+						<span class='desc'>Full Text</span>
+					</a>
+					<a href='https://developers.google.com/appengine/docs/java/urlfetch?hl=it-IT' target="_blank">URL Fetch</a>
+					<a href='https://developers.google.com/appengine/docs/java/xmpp?hl=it-IT' target="_blank">
+						XMPP
+						<span class='desc'>Chat!</span>
+					</a>
+		    	</div>
 				<div class='footer'>
 					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
 				</div>
-				<img src='img/gtug-logo-small.png' class='footer-logo-small'>
+				<a href="http://torino.gtugs.org/" target="_blank"><img src='img/gtug-logo-small.png' class='footer-logo-small'></a>
 		    </div>
-		    <div id="overview" class="step slide slide-trasparent" data-x="1000" data-y="300" data-scale="9">
+		    <div id="overview" class="step slide slide-trasparent" data-x="1000" data-y="300" data-scale="9	">
 		    	<div class='big'>
 					<div class='title text-align-left'>Grazie per l'attenzione</div>
-		        </div>
-		        <div class='mail'><a href='mailto:franceschetti.alessandro@gmail.com'>franceschetti.alessandro@gmail.com</a></div>
+			</div>
+			<img id='gtug-logo-vertical' src="img/gtug-logo-vertical.png" alt='Gtug' >
+			<div class='mail'><a href='mailto:franceschetti.alessandro@gmail.com'>franceschetti.alessandro@gmail.com</a></div>
 		       	<div class='last-footer'>
-					<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
-				</div>
+				<div class=''><i><small>Torino, 5 Giugno 2012 - GTUG &amp; Startupweekend Bootcamp</small></i></div>
+			</div>
     		</div>
 		</div>
+		<div class="hint">
+		    <span>Use a spacebar or arrow keys to navigate</span>
+		</div>
+		<script>
+		if ("ontouchstart" in document.documentElement) { 
+		    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+		}
+		</script>		
 		<script type="text/javascript" src="impress.js"></script>
+		<script>impress().init();</script>
 		<script type="text/javascript">
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'UA-32158590-1']);

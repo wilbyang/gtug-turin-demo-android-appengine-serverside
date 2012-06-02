@@ -6,12 +6,34 @@
 	display: block;
 }
 
+
 /* additional styles just to make things look a bit nicer */
+
+
 body {
-	background: #EBEBEB;
-	font: 16px/24px "HelveticaNeue-Light", "Helvetica Neue Light",
-		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	color: #333;
+    font-family: 'PT Sans', sans-serif;
+    min-height: 740px;
+    
+    background: rgb(215, 215, 215);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
+    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));    
+}
+
+
+#overview{
+	visibility: hidden;
+}
+
+#overview.active{
+	visibility: visible;	
+}
+
+.active {
+	z-index: 1000!important;
 }
 
 .step {
@@ -19,6 +41,8 @@ body {
 	margin: 0 auto 24px auto;
 	text-align: center;
 }
+
+
 
 a,a:visited,a:active {
 	color: #1a80e5;
@@ -36,11 +60,22 @@ strong {
 	letter-spacing: 4px;
 }
 
+#gtug-logo-vertical{
+	width: 140px;
+	position: absolute;
+	top: 140px;
+	left: 60px;
+	
+}
+
 .last-footer{
 	-moz-transform: rotate(-90deg);
 	-moz-transform-origin:right bottom; 
+	-webkit-transform: rotate(-90deg);
+	-webkit-transform-origin:right bottom; 
 	position: absolute;
-	right: 0px;
+	font-size: smaller;
+	right: 0;
 	top: 0;
 }
 
@@ -54,6 +89,8 @@ strong {
 .active .rotating {
     -moz-transform: rotate(-10deg);
     -moz-transition-delay: 2s;
+    -webkit-transform: rotate(-10deg);
+    -webkit-transition-delay: 2s;
 }
 
 .active .swing {
@@ -91,6 +128,7 @@ strong {
 
 code{
 	display: block;
+	color: blue;
 }
 .code{
 	text-align: left;
@@ -118,6 +156,19 @@ li {
 	font-size: large;
 }
 
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0.6;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.impress-enabled .step.active { opacity: 1 }
+
 .slide {
 	position: relative;
 	background-color: white;
@@ -141,6 +192,7 @@ li {
 	border-radius: 10px 10px 10px 10px;
 	border: solid 4px gray;
 	padding: .5em;
+	overflow: hidden;
 }
 
 .slide-trasparent {
@@ -168,6 +220,23 @@ li {
 	font-weight:  bold;
 	letter-spacing: 40px;
 }
+
+.other-service-list a{
+	display: block;
+	float: left;
+	margin: .2em;
+	padding: .3em;
+	background-color: #eeeeec;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	
+}
+
+.other-service-list .desc {
+	display: block;
+	font-size: smaller;
+	color: gray!important;
+}
 .footer {
 	clear: both;
 	overflow: hidden;
@@ -182,3 +251,53 @@ li {
 	bottom: 5px;
 	right: 5px;
 }
+
+.hint {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 150px;
+    background: rgba(0,0,0,0.5);
+    color: #EEE;
+    text-align: center;
+    
+    font-size: 50px;
+    padding: 10px;
+    
+    z-index: 100;
+    
+    opacity: 0;
+    -webkit-transform: translateY(400px);
+    -moz-transform:    translateY(400px);
+    -ms-transform:     translateY(400px);
+    -o-transform:      translateY(400px);
+    transform:         translateY(400px);
+
+    -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
+    -moz-transition:    opacity 1s,    -moz-transform 0.5s 1s;
+    -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s;
+    -o-transition:      opacity 1s,      -o-transform 0.5s 1s;
+    transition:         opacity 1s,         transform 0.5s 1s;
+}
+
+.impress-enabled .hint { display: block }
+
+.impress-on-welcome .hint {
+    opacity: 1;
+    
+    -webkit-transform: translateY(0px);
+    -moz-transform:    translateY(0px);
+    -ms-transform:     translateY(0px);
+    -o-transform:      translateY(0px);
+    transform:         translateY(0px);
+    
+    -webkit-transition: opacity 1s 5s, -webkit-transform 0.5s 4.5s;
+    -moz-transition:    opacity 1s 5s,    -moz-transform 0.5s 4.5s;
+    -ms-transition:     opacity 1s 5s,     -ms-transform 0.5s 4.5s;
+    -o-transition:      opacity 1s 5s,      -o-transform 0.5s 4.5s;
+    transition:         opacity 1s 5s,         transform 0.5s 4.5s;
+}
+
+.impress-enabled          { pointer-events: none }
+.impress-enabled #impress { pointer-events: auto }

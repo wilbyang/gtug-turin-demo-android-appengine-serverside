@@ -1,5 +1,7 @@
 package org.gtug.torino.bootcamp;
 
+import static com.google.appengine.api.taskqueue.TaskOptions.Builder.withUrl;
+
 import java.io.IOException;
 import java.util.Date;
 import java.util.List;
@@ -22,9 +24,12 @@ import com.google.appengine.api.images.Image;
 import com.google.appengine.api.images.ImagesService;
 import com.google.appengine.api.images.ImagesServiceFactory;
 import com.google.appengine.api.images.Transform;
+import com.google.appengine.api.taskqueue.Queue;
+import com.google.appengine.api.taskqueue.QueueFactory;
+import com.google.appengine.api.taskqueue.TaskOptions;
+import com.google.appengine.api.taskqueue.TaskOptions.Method;
 
-public class UploadServlet
-		extends HttpServlet {
+public class UploadServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	private BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
@@ -49,6 +54,7 @@ public class UploadServlet
 		try {
 			Map<String, List<BlobKey>> blobs = blobstoreService.getUploads(req);
 			List<BlobKey> blobKeys = blobs.get("uploadFormElement");
+			Long photoId = null;
 			if (blobKeys != null) {
 				int counter = 0;
 				for (BlobKey blobKey : blobKeys) {
@@ -66,7 +72,7 @@ public class UploadServlet
 							photo.setThumbData(new Blob(thumbImage.getImageData()));
 							photo.setCaption(caption);
 							photo.setLastupdate(new Date());
-							BaseDAO.put(photo);
+							photoId = BaseDAO.put(photo);
 						} catch (Exception e) {
 							log.severe("[UploadServlet::doPost] loop: " + counter + ") thumbImage error: " + e.getMessage());
 							e.printStackTrace();
@@ -74,6 +80,19 @@ public class UploadServlet
 						}
 						counter++;
 					}
+				}
+
+				String androidId = req.getParameter("androidId");
+				if (androidId != null && !androidId.trim().equals("")) {
+					Queue queue = QueueFactory.getDefaultQueue();
+
+					TaskOptions url = withUrl("/tasks/messages");
+					url.param("androidId", androidId);
+					url.param("photoId", ""+photoId);
+
+					url.method(Method.POST);
+					queue.add(url);
+
 				}
 			}
 		} catch (Exception e) {
